@@ -9,63 +9,91 @@
       content="WikiKab propose une encyclopédie de la Kabylie : histoire, géographie, langue, culture, institutions et patrimoine."
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="wikikab.js" defer></script>
   </head>
   <body class="wikikab-home">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
     <header class="wiki-header">
       <div class="container wiki-header-inner">
-        <div class="wiki-brand" aria-label="WikiKab">
+        <a class="wiki-brand" href="index.html" aria-label="WikiKab, accueil">
           <div class="wiki-logo">W</div>
           <div class="wiki-brand-text">
             <div class="wiki-brand-name">WIKIKAB</div>
             <div class="wiki-brand-sub">Encyclopédie de la Kabylie</div>
           </div>
-        </div>
+        </a>
 
-        <div class="wiki-search-area">
+        <form class="wiki-search-area" action="index.html" method="get" role="search">
           <label class="sr-only" for="wiki-search">Recherche WikiKab</label>
-          <input id="wiki-search" type="search" value="Kabylie" aria-label="Recherche WikiKab" />
-          <button type="button">Rechercher</button>
-        </div>
+          <input id="wiki-search" name="q" type="search" value="Kabylie" placeholder="Rechercher dans WikiKab" aria-label="Recherche WikiKab" />
+          <button type="submit">Rechercher</button>
+        </form>
 
         <div class="wiki-user-tools">
-          <span>FR</span>
-          <span>Taqbaylit</span>
-          <span>ⵜⵉⴼⵉⵏⴰⵖ</span>
+          <details class="wiki-language-menu">
+            <summary>FR</summary>
+            <div class="language-options" aria-label="Choisir une langue">
+              <a href="index.html?lang=fr" aria-current="page">Français</a>
+              <a href="index.html?lang=kab">Taqbaylit</a>
+              <a href="index.html?lang=tzm">ⵜⵉⴼⵉⵏⴰⵖ</a>
+            </div>
+          </details>
+          <a class="account-link" href="index.html#creer-un-compte">Créer un compte</a>
+          <a class="account-link" href="index.html#connexion">Connexion</a>
         </div>
       </div>
     </header>
+
+    <nav class="wiki-primary-nav" aria-label="Navigation principale">
+      <div class="container wiki-primary-nav-inner">
+        <a class="is-active" href="index.html" aria-current="page">Accueil</a>
+        <a href="article.html">Kabylie</a>
+        <a href="category.html">Histoire</a>
+        <a href="category.html">Géographie</a>
+        <a href="category.html">Culture</a>
+        <a href="category.html">Patrimoine</a>
+        <a href="category.html">Villages</a>
+        <a href="category.html">Personnalités</a>
+      </div>
+    </nav>
 
     <div class="container wiki-shell">
       <aside class="wiki-sidebar" aria-label="Navigation principale">
         <nav>
           <h2>Explorer</h2>
           <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Kabylie</a></li>
-            <li><a href="#">Histoire</a></li>
-            <li><a href="#">Géographie</a></li>
-            <li><a href="#">Langue kabyle</a></li>
-            <li><a href="#">Culture</a></li>
-            <li><a href="#">Patrimoine</a></li>
-            <li><a href="#">Villages</a></li>
-            <li><a href="#">Personnalités</a></li>
-            <li><a href="#">Institutions</a></li>
+            <li><a class="is-active" href="index.html" aria-current="page">Accueil</a></li>
+            <li><a href="article.html">Kabylie</a></li>
+            <li><a href="category.html">Histoire</a></li>
+            <li><a href="category.html">Géographie</a></li>
+            <li><a href="category.html">Langue kabyle</a></li>
+            <li><a href="category.html">Culture</a></li>
+            <li><a href="category.html">Patrimoine</a></li>
+            <li><a href="category.html">Villages</a></li>
+            <li><a href="category.html">Personnalités</a></li>
+            <li><a href="category.html">Institutions</a></li>
+          </ul>
+
+          <h2>Découvrir</h2>
+          <ul>
+            <li><a href="article.html">Article du jour</a></li>
+            <li><a href="category.html">Chronologie</a></li>
+            <li><a href="category.html">Portails thématiques</a></li>
           </ul>
 
           <h2>Participer</h2>
           <ul>
-            <li><a href="#">Contribuer</a></li>
-            <li><a href="#">Créer un article</a></li>
-            <li><a href="#">Articles à améliorer</a></li>
-            <li><a href="#">Ajouter une source</a></li>
-            <li><a href="#">Communauté</a></li>
+            <li><a href="category.html">Contribuer</a></li>
+            <li><a href="category.html">Créer un article</a></li>
+            <li><a href="category.html">Articles à améliorer</a></li>
+            <li><a href="category.html">Communauté</a></li>
           </ul>
         </nav>
       </aside>
 
-      <main class="wiki-main">
+      <main class="wiki-main" id="main-content">
         <div class="wiki-breadcrumbs" aria-label="Fil d’Ariane">
-          <a href="#">Accueil</a>
+          <a href="index.html">Accueil</a>
           <span>›</span>
           <span>Portails</span>
         </div>
@@ -78,6 +106,10 @@
               La base documentaire de la Kabylie : histoire, géographie, langue, culture,
               villages, personnalités, institutions et patrimoine.
             </p>
+            <div class="hero-actions">
+              <a class="wiki-button wiki-button-primary" href="article.html">Lire l’article du jour</a>
+              <a class="wiki-button wiki-button-secondary" href="category.html">Explorer les catégories</a>
+            </div>
           </div>
           <div class="wiki-hero-stats">
             <div>
@@ -96,36 +128,36 @@
         </section>
 
         <section class="wiki-portal-grid" aria-label="Portails thématiques">
-          <article class="portal-card blue">
+            <a class="portal-card blue" href="category.html">
             <span class="portal-tag">Géographie</span>
             <h3>Montagnes et territoires</h3>
             <p>Villages, montagnes, reliefs, vallées et paysages de la Kabylie.</p>
-          </article>
-          <article class="portal-card green">
+            </a>
+          <a class="portal-card green" href="category.html">
             <span class="portal-tag">Histoire</span>
             <h3>Histoire locale</h3>
             <p>Chroniques, dynamiques politiques, luttes et héritages historiques.</p>
-          </article>
-          <article class="portal-card ochre">
+          </a>
+          <a class="portal-card ochre" href="category.html">
             <span class="portal-tag">Langue</span>
             <h3>Langue kabyle</h3>
             <p>Orthographes, variantes, phonologie, mots et expressions du kabyle.</p>
-          </article>
-          <article class="portal-card neutral">
+          </a>
+          <a class="portal-card neutral" href="category.html">
             <span class="portal-tag">Culture</span>
             <h3>Culture et traditions</h3>
             <p>Musique, arts, fêtes, coutumes, récits et patrimoine immatériel.</p>
-          </article>
-          <article class="portal-card neutral">
+          </a>
+          <a class="portal-card neutral" href="category.html">
             <span class="portal-tag">Personnalités</span>
             <h3>Figures kabyles</h3>
             <p>Écrivains, artistes, scientifiques, intellectuels et leaders.</p>
-          </article>
-          <article class="portal-card blue">
+          </a>
+          <a class="portal-card blue" href="category.html">
             <span class="portal-tag">Institutions</span>
             <h3>Tajmaɛt et Aṛc</h3>
             <p>Institutions traditionnelles, organes locaux et structures sociopolitiques.</p>
-          </article>
+          </a>
         </section>
 
         <section class="wiki-featured">
@@ -202,6 +234,29 @@
             </ul>
           </div>
         </section>
+
+        <section class="account-area" aria-label="Compte WikiKab">
+          <div class="account-card" id="creer-un-compte">
+            <span class="wiki-kicker">Participation</span>
+            <h2>Créer un compte</h2>
+            <p>Créez un espace pour suivre vos contributions et vos listes de lecture.</p>
+            <form class="account-form">
+              <label for="signup-email">Adresse e-mail</label>
+              <input id="signup-email" type="email" placeholder="vous@exemple.org" />
+              <button class="wiki-button wiki-button-primary" type="submit">Créer mon compte</button>
+            </form>
+          </div>
+          <div class="account-card" id="connexion">
+            <span class="wiki-kicker">Espace personnel</span>
+            <h2>Connexion</h2>
+            <p>Retrouvez vos préférences et votre historique de contribution.</p>
+            <form class="account-form">
+              <label for="login-email">Adresse e-mail</label>
+              <input id="login-email" type="email" placeholder="vous@exemple.org" />
+              <button class="wiki-button wiki-button-secondary" type="submit">Se connecter</button>
+            </form>
+          </div>
+        </section>
       </main>
     </div>
 
@@ -210,9 +265,13 @@
         <p>WikiKab — Encyclopédie de la Kabylie</p>
         <div class="footer-links">
           <a href="#">À propos</a>
+          <a href="#">Licence</a>
+          <a href="#">Confidentialité</a>
+          <a href="#">Conditions</a>
           <a href="#">Aide</a>
           <a href="#">Contact</a>
           <a href="#">Contribuer</a>
+          <a href="#">Statistiques</a>
         </div>
       </div>
     </footer>
