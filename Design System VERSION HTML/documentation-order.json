@@ -1,0 +1,78 @@
+{
+  "version": "V12.10.13 EN",
+  "documentation_order": [
+    {
+      "chapter": 1,
+      "name": "Foundations",
+      "sections": [
+        "principles",
+        "fundamentals",
+        "styles-overview",
+        "tokens",
+        "rfk-typography-official",
+        "typography",
+        "brand-motion"
+      ]
+    },
+    {
+      "chapter": 2,
+      "name": "Components",
+      "sections": [
+        "components",
+        "component-foundations",
+        "component-examples",
+        "extended-components",
+        "identity",
+        "headers",
+        "procedure-steps",
+        "page-tools"
+      ]
+    },
+    {
+      "chapter": 3,
+      "name": "Patterns",
+      "sections": [
+        "patterns",
+        "government-patterns",
+        "institutional-reference"
+      ]
+    },
+    {
+      "chapter": 4,
+      "name": "Templates",
+      "sections": [
+        "templates"
+      ]
+    },
+    {
+      "chapter": 5,
+      "name": "CSS shortcuts",
+      "sections": [
+        "utilities"
+      ]
+    },
+    {
+      "chapter": 6,
+      "name": "Guidelines",
+      "sections": [
+        "guidelines",
+        "accessibility"
+      ]
+    },
+    {
+      "chapter": 7,
+      "name": "Technical",
+      "sections": [
+        "technical-architecture"
+      ]
+    },
+    {
+      "chapter": 8,
+      "name": "Legal & compliance",
+      "sections": [
+        "legal-compliance",
+        "help"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+:root{
+  --kabylia-webds-blue:#0166B7;
+  --kabylia-webds-yellow:#F0CD04;
+  --kabylia-webds-red:#CE273F;
+
+  --kabylia-webds-bg:#F5F7FA;
+  --kabylia-webds-surface:#FFFFFF;
+  --kabylia-webds-surface-2:#EEF2F6;
+  --kabylia-webds-text:#111827;
+  --kabylia-webds-muted:#4B5563;
+  --kabylia-webds-border:#D0D7E2;
+  --kabylia-webds-link:#003F8F;
+  --kabylia-webds-navy:#0B1725;
+  --kabylia-webds-navy-2:#071C2C;
+  --kabylia-webds-focus:#FFBF00;
+  --kabylia-webds-success:#0B6B3A;
+  --kabylia-webds-warning:#8A5A00;
+  --kabylia-webds-danger:#8B1423;
+  --kabylia-webds-info:#0B5CAD;
+
+  --font-sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-mono:"Fira Code",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --fs-xs:.75rem;
+  --fs-sm:.875rem;
+  --fs-base:1rem;
+  --fs-lg:1.125rem;
+  --fs-xl:1.25rem;
+  --fs-2xl:1.5rem;
+  --fs-3xl:2rem;
+  --fs-4xl:2.5rem;
+  --fs-display:clamp(2.6rem,5vw,4.8rem);
+
+  --s1:4px;
+  --s2:8px;
+  --s3:12px;
+  --s4:16px;
+  --s5:20px;
+  --s6:24px;
+  --s8:32px;
+  --s10:40px;
+  --s12:48px;
+  --s16:64px;
+  --s24:96px;
+
+  --r-sm:6px;
+  --r-md:10px;
+  --r-lg:16px;
+  --r-xl:24px;
+
+  --shadow-sm:0 2px 8px rgba(16,24,40,.08);
+  --shadow-md:0 10px 30px rgba(16,24,40,.12);
+  --shadow-lg:0 22px 60px rgba(16,24,40,.16);
+
+  --content:760px;
+  --wide:1280px;
+}
+
+html[data-theme="dark"]{
+  --kabylia-webds-bg:#07111D;
+  --kabylia-webds-surface:#0D1A2A;
+  --kabylia-webds-surface-2:#132338;
+  --kabylia-webds-text:#F5F7FA;
+  --kabylia-webds-muted:#C3CFDF;
+  --kabylia-webds-border:#29415E;
+  --kabylia-webds-link:#8CCBFF;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.25);
+  --shadow-md:0 10px 30px rgba(0,0,0,.35);
+  --shadow-lg:0 22px 60px rgba(0,0,0,.45);
+}
+
+html[data-theme="aaa"]{
+  --kabylia-webds-bg:#FFFFFF;
+  --kabylia-webds-surface:#FFFFFF;
+  --kabylia-webds-surface-2:#F3F4F6;
+  --kabylia-webds-text:#111111;
+  --kabylia-webds-muted:#2F2F2F;
+  --kabylia-webds-border:#111111;
+  --kabylia-webds-link:#003A82;
+  --shadow-sm:none;
+  --shadow-md:none;
+  --shadow-lg:none;
+}
+
+
+/* === V10 visual system refinements === */
+:root{
+  --font-sans:"Inter","Aptos","Segoe UI Variable","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-display:"Inter","Aptos Display","Segoe UI Variable Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+
+  --tracking-tight:-.035em;
+  --tracking-heading:-.022em;
+  --tracking-body:-.006em;
+  --leading-display:.98;
+  --leading-heading:1.12;
+  --leading-body:1.68;
+
+  --surface-highlight:rgba(255,255,255,.72);
+  --line-soft:rgba(17,24,39,.08);
+  --glass:rgba(255,255,255,.84);
+}
+html[data-theme="dark"]{
+  --surface-highlight:rgba(255,255,255,.04);
+  --line-soft:rgba(255,255,255,.09);
+  --glass:rgba(13,26,42,.88);
+}
+
+
+/* === V12 Institutional Premium === */
+:root{
+  --kabylia-webds-max-text:72ch;
+  --kabylia-webds-header-h:88px;
+  --kabylia-webds-section-gap:88px;
+  --kabylia-webds-panel-border:rgba(17,24,39,.10);
+  --kabylia-webds-panel-hover:rgba(1,102,183,.14);
+  --kabylia-webds-accent-soft:rgba(1,102,183,.06);
+  --kabylia-webds-yellow-soft:rgba(240,205,4,.11);
+  --kabylia-webds-red-soft:rgba(206,39,63,.08);
+}
+html[data-theme="dark"]{
+  --kabylia-webds-panel-border:rgba(255,255,255,.10);
+  --kabylia-webds-panel-hover:rgba(140,203,255,.18);
+  --kabylia-webds-accent-soft:rgba(140,203,255,.08);
+  --kabylia-webds-yellow-soft:rgba(240,205,4,.10);
+  --kabylia-webds-red-soft:rgba(206,39,63,.10);
+}
+
+
+/* === V12.10.1 : système typographique officiel RFK === */
+:root{
+  --font-body:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-heading:"Space Grotesk","Inter",system-ui,sans-serif;
+  --font-heading-alt:"Outfit","Inter",system-ui,sans-serif;
+  --font-tifinagh:"Noto Sans Tifinagh","Inter",sans-serif;
+}

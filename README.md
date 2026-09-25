@@ -1,4 +1,4 @@
-# RFK Design System
+# Kabylia WebDS
 
 HTML/CSS/JavaScript reference for digital interfaces of the Federal Republic of Kabylia. The project presents an institutional documentation page with reusable components, public-service patterns, design tokens, and accessibility examples.
 
@@ -19,16 +19,16 @@ Opening the HTML file directly may work for a demo, but a local server is recomm
 ## Contents
 
 - [Html Design System/index.html](Html%20Design%20System/index.html): interactive demo and documentation page.
-- [rfk-tokens.css](rfk-tokens.css): colors, typography, spacing, radii, shadows, and themes.
-- [rfk-components.css](rfk-components.css): component styling, layouts, responsive behavior, and accessibility states.
-- [rfk-core.js](rfk-core.js): navigation interactions and behavioral components.
-- [rfk-emblem.svg](rfk-emblem.svg), [rfk-flag-en.svg](rfk-flag-en.svg), [rfk-flag-fr.svg](rfk-flag-fr.svg), [rfk-flag-kab.svg](rfk-flag-kab.svg): local institutional assets.
+- [Html Design System/kabylia-webds-tokens.css](Html%20Design%20System/kabylia-webds-tokens.css): colors, typography, spacing, radii, shadows, and themes.
+- [Html Design System/kabylia-webds-components.css](Html%20Design%20System/kabylia-webds-components.css): component styling, layouts, responsive behavior, and accessibility states.
+- [Html Design System/kabylia-webds-core.js](Html%20Design%20System/kabylia-webds-core.js): navigation interactions and behavioral components.
+- [Html Design System/kabylia-webds-emblem.svg](Html%20Design%20System/kabylia-webds-emblem.svg), [kabylia-webds-flag-en.svg](Html%20Design%20System/kabylia-webds-flag-en.svg), [kabylia-webds-flag-fr.svg](Html%20Design%20System/kabylia-webds-flag-fr.svg), [kabylia-webds-flag-kab.svg](Html%20Design%20System/kabylia-webds-flag-kab.svg): local institutional assets.
 
 Font dependencies are loaded from Google Fonts in the HTML page: Inter, Space Grotesk, Outfit, and Noto Sans Tifinagh. A local hosting strategy should be planned for deployments with availability or privacy requirements.
 
 ## Included features
 
-- Responsive institutional header with primary navigation, mobile menu, search, and breadcrumbs.
+- Responsive institutional header with primary navigation, mobile menu, search, and breadcrumbs. Language and appearance selectors live in the utility bar; documentation links live in the menu.
 - English, French, and Taqbaylit/Kabyle language selector with local preference persistence.
 - Three appearances: light, dark, and high accessibility.
 - Authentication, account creation, OTP, session expiration, and RFK digital identity patterns.
@@ -43,13 +43,13 @@ Font dependencies are loaded from Google Fonts in the HTML page: Inter, Space Gr
 The HTML should load the tokens before the components:
 
 ```html
-<link rel="stylesheet" href="rfk-tokens.css">
-<link rel="stylesheet" href="rfk-components.css">
+<link rel="stylesheet" href="kabylia-webds-tokens.css">
+<link rel="stylesheet" href="kabylia-webds-components.css">
 ```
 
 The main CSS variables are grouped by purpose:
 
-- Colors: `--rfk-blue`, `--rfk-yellow`, `--rfk-red`, `--rfk-bg`, `--rfk-surface`, `--rfk-text`, `--rfk-border`.
+- Colors: `--kabylia-webds-blue`, `--kabylia-webds-yellow`, `--kabylia-webds-red`, `--kabylia-webds-bg`, `--kabylia-webds-surface`, `--kabylia-webds-text`, `--kabylia-webds-border`.
 - Typography: `--font-body`, `--font-heading`, `--font-heading-alt`, `--font-tifinagh`.
 - Scale: `--s1` through `--s24`, plus `--fs-xs` through `--fs-display`.
 - Shape and depth: `--r-sm` through `--r-xl`, plus `--shadow-sm` through `--shadow-lg`.
@@ -64,7 +64,7 @@ Available values are `light`, `dark`, and `aaa`.
 
 ## JavaScript
 
-The `rfk-core.js` file requires no framework. It initializes, among other things:
+The `kabylia-webds-core.js` file requires no framework. It initializes, among other things:
 
 - theme and language persistence through `localStorage`;
 - opening and closing menus, search, and accordions;
@@ -72,7 +72,7 @@ The `rfk-core.js` file requires no framework. It initializes, among other things
 - toasts and cookie consent;
 - printing, link copying, tabs, and LTR/RTL direction tools.
 
-To display a toast from an application script, the page exposes `window.rfkToast(message)` when the component is present.
+To display a toast from an application script, the page exposes `window.kabyliaWebDS.toast(message)` when the component is present.
 
 ## Accessibility
 

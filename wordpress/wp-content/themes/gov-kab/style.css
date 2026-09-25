@@ -1,0 +1,44 @@
+/*
+Theme Name: GOV.KAB Government Design System
+Theme URI: https://gov.kab/
+Author: GOV.KAB
+Description: A block theme for clear, accessible and trusted public services.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.7
+Requires PHP: 8.0
+Text Domain: gov-kab
+*/
+
+:root {
+  --gov-kab-night: #062536;
+  --gov-kab-ink: #102a39;
+  --gov-kab-sky: #0d5f89;
+  --gov-kab-forest: #276247;
+  --gov-kab-gold: #d9a62d;
+  --gov-kab-paper: #f5f2ea;
+  --gov-kab-line: rgba(16, 42, 57, 0.16);
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: var(--gov-kab-ink); }
+a { text-underline-offset: .2em; }
+.wp-site-blocks { overflow: clip; }
+.gov-kab-skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 100; padding: .75rem 1rem; background: #fff; color: #000; }
+.gov-kab-skip-link:focus { top: 1rem; }
+.gov-kab-utility { font-size: .78rem; letter-spacing: .02em; }
+.gov-kab-brand-mark { width: 3rem; height: 3rem; object-fit: contain; }
+.gov-kab-hero { min-height: 38rem; background: linear-gradient(90deg, rgba(4, 29, 45, .92), rgba(4, 29, 45, .58)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=90') center / cover; }
+.gov-kab-hero h1 { max-width: 10ch; }
+.gov-kab-hero-copy { max-width: 55rem; }
+.gov-kab-status { border-top: 1px solid rgba(255,255,255,.28); border-bottom: 1px solid rgba(255,255,255,.28); }
+.gov-kab-panel { border-top: 4px solid var(--gov-kab-gold); }
+.gov-kab-paper { background: var(--gov-kab-paper); }
+.gov-kab-section-label { color: var(--gov-kab-forest); font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.gov-kab-gold-rule { border-color: var(--gov-kab-gold) !important; }
+.gov-kab-footer a { color: #d8e6df; }
+.gov-kab-footer a:hover { color: #fff; }
+@media (max-width: 781px) {
+  .gov-kab-hero { min-height: 34rem; }
+  .gov-kab-hero h1 { max-width: 12ch; }
+}
